@@ -106,3 +106,10 @@ A script to output the optimal team given a list of opponents pokemon
 ```
 - Loop through the array and return the best possible opponent type based on damage multiplier
 - Return a array of the best pokemon team to face the opponents pokemon
+
+# Possible improvements
+- Unit test more functions
+- Handle edge case where the pokemon is of the same type | I didn't feel this really added much more for the time
+- We could definitely limit total calls to the API if we know this data doesn't move much, ideas of caching or saving to a file
+- Although there are types more could easily be added with some more time spent
+- This could move to a more interactive CLI game style program

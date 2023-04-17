@@ -32,7 +32,7 @@ const getBestTypeToFace = (pokemon: FormattedPokemon): string => {
 
     const sortedEffectiveTypes = Object.entries(effectiveTypes).sort((a, b) => b[1] - a[1])
 
-    if (!sortedEffectiveTypes.length) return pokemon.name
+    if (!sortedEffectiveTypes.length) return pokemon.types[0]
 
     return sortedEffectiveTypes[0][0]
 }
@@ -40,6 +40,10 @@ const getBestTypeToFace = (pokemon: FormattedPokemon): string => {
 const getBestTypes = (pokemon: FormattedPokemon[]) => {
     return pokemon.map(pokemonData => {
         const bestType = getBestTypeToFace(pokemonData)
+
+        if (pokemonData.types.includes(bestType)) {
+            //TODO: Logic to get pokemon of the same type and compare total_base_stats
+        }
 
         return {
             name: pokemonData.name,

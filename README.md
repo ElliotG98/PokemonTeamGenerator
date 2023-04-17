@@ -9,7 +9,6 @@ A script to output the optimal team given a list of opponents pokemon
 
 # Assumptions
 - The script will be provided with an array of pokemon names
-- The returned result will be an array of 6 types not specific pokemon
 
 # Plan
 

@@ -14,6 +14,7 @@ export interface DamageRelations {
 
 export interface FormattedPokemon {
     name: string
+    types: string[]
     total_base_stats: number
     damage_relations: DamageRelations[]
 }

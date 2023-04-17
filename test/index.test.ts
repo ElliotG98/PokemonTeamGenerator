@@ -13,7 +13,7 @@ describe('get the best pokemon to face off against', () => {
         expect(await getBestPokemonTeam(notATeamOf6)).toEqual('Not enough pokemon provided as input');
     })
 
-    test('Returning the best types', async () => {
+    test('Returning the best pokemon team', async () => {
         const opponentPokemon = [
             'bulbasaur',
             'ivysaur',
@@ -22,7 +22,9 @@ describe('get the best pokemon to face off against', () => {
             'charmeleon',
             'charizard'
         ]
-        await getBestPokemonTeam(opponentPokemon)
+        const response = await getBestPokemonTeam(opponentPokemon)
+        console.log(response)
+        expect(response?.length).toEqual(6);
     })
 })
 
